@@ -1,3 +1,5 @@
+// websites: https://dart.cn/guides/language/language-tour#variables
+
 void main(List<String> args) {
   varaiable();
   default_value();
