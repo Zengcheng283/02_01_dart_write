@@ -66,4 +66,8 @@ void final_and_const() {
   // If you use final as key word, the var can not be changed.
   final String use_final_var = "It uses final";
   // use_final_var = "change word"; // The final variable 'use_final_var' can only be set once. Try making 'use_final_var' non-final.
+
+  // Also, if you use const to create a var, it can not ba changed as well.
+  const String use_const_var = "It use const";
+  // use_const_var = "change word"; // Constant variables can't be assigned a value. Try removing the assignment, or remove the modifier 'const' from the variable.
 }
