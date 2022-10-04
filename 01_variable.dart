@@ -1,9 +1,9 @@
 // websites: https://dart.cn/guides/language/language-tour#variables
 
 void main(List<String> args) {
-  varaiable();
-  default_value();
-  late_key();
+  // varaiable();
+  // default_value();
+  // late_key();
 }
 
 // If you use var to create a variable and don't give it an initial value,
