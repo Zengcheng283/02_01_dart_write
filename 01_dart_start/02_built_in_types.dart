@@ -3,7 +3,10 @@ void main(List<String> args) {
   // num_to_string();
   // bit_operating();
   // type_str();
-  type_bool();
+  // type_bool();
+  // type_list();
+  // type_sets();
+  // type_maps();
 }
 
 void type_numbers() {
@@ -87,4 +90,79 @@ void type_bool() {
   assert(zdevz.isNaN);
   var name = '';
   assert(name.isEmpty);
+}
+
+void type_list() {
+  var list = [1, 2, 3];
+  assert(list.length == 3);
+  assert(list[1] == 2);
+
+  list[1] = 1;
+  assert(list[1] == 1);
+
+  var list2 = [0, ...list];
+  assert(list2.length == 1);
+
+  var listOfInts = [1, 2, 3];
+  var listOfStrings = ['#0', for (var i in listOfInts) '#$i'];
+  assert(listOfStrings[1] == '#1');
+}
+
+void type_sets() {
+  var halogens = {'fluorine', 'chlorine', 'bromine', 'iodine', 'astatine'};
+  var elements = <String>{};
+  elements.add('fluorine');
+  elements.addAll(halogens);
+  assert(elements.length == 5);
+
+  final constantSet = const {
+    'fluorine',
+    'chlorine',
+    'bromine',
+    'iodine',
+    'astatine',
+  };
+// constantSet.add('helium'); // This line will cause an error.
+}
+
+void type_maps() {
+  var gifts = {
+    // Key:    Value
+    'first': 'partridge',
+    'second': 'turtledoves',
+    'fifth': 'golden rings'
+  };
+
+  var nobleGases = {
+    2: 'helium',
+    10: 'neon',
+    18: 'argon',
+  };
+
+// var gifts = Map<String, String>();
+// gifts['first'] = 'partridge';
+// gifts['second'] = 'turtledoves';
+// gifts['fifth'] = 'golden rings';
+
+// var nobleGases = Map<int, String>();
+// nobleGases[2] = 'helium';
+// nobleGases[10] = 'neon';
+// nobleGases[18] = 'argon';
+
+  gifts['fourth'] = 'calling birds'; // Add a key-value pair
+  assert(gifts['first'] == 'partridge');
+  assert(gifts['fifth'] == null);
+
+  gifts.clear();
+  gifts['first'] = 'partridge';
+  gifts['fourth'] = 'calling birds';
+  assert(gifts.length == 2);
+
+  final constantMap = const {
+    2: 'helium',
+    10: 'neon',
+    18: 'argon',
+  };
+
+  // constantMap[2] = 'Helium'; // This line will cause an error.
 }
